@@ -270,6 +270,7 @@ button:focus {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 .team {
@@ -305,14 +306,15 @@ button:focus {
   display: flex;
   justify-content: center;
   gap: 24px;
+  
 }
 
 .icon-socialnetworks {
 width: 40px;
 height: 40px;
-
 }
-.icon-social-box .link {
+.icon-socialnetworks .link {
+  padding:0;
   width: 100%;
   height: 100%;
   background-color: #4d5ae5;
