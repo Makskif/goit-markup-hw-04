@@ -74,15 +74,12 @@ img {
 .main-page {
   display: flex;
   gap: 40px;
-  position: relative;
 }
 
 .main-page-address {
   display: flex;
   gap: 40px;
 }
-
-
 
 a {
   font-family: "Roboto", sans-serif;
@@ -120,20 +117,22 @@ a {
 .link:active {
   color: #404bbf;
   text-decoration: underline;
-  
 }
 
 .link {
   padding-top: 24px;
-    padding-bottom: 24px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-bottom: 24px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-active {
+.link-active:first-child {
   position: relative;
-padding-top: 24px;
+  padding-top: 24px;
   padding-bottom: 24px;
-  
+}
+.link-active {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .link::after {
   position: absolute;
@@ -146,9 +145,6 @@ padding-top: 24px;
   bottom: -1px;
   content: "";
 }
-
-
-
 
 ul {
   list-style-type: none;
@@ -168,12 +164,19 @@ ul {
 .link:hover,
 .link:focus {
   color: #404bbf;
-
 }
 
 .hero-image {
   background: #2e2f42;
   padding: 188px 0;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(/images/people-office.jpg);
+  background-repeat: no-repeat;
+  max-width: 1440px;
+  background-size: cover;
 }
 
 .title {
@@ -203,6 +206,7 @@ ul {
   border: none;
   border-radius: 4px;
   margin: 0 auto;
+  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button:hover,
