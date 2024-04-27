@@ -46,6 +46,8 @@ img {
 }
 
 .page-header {
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   border-bottom: 1px solid #e7e9fc;
 }
 
@@ -79,10 +81,7 @@ img {
   gap: 40px;
 }
 
-.link {
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
+
 
 a {
   font-family: "Roboto", sans-serif;
@@ -117,9 +116,27 @@ a {
   color: #2e2f42;
 }
 
-.studio:active {
+.link:active {
   color: #404bbf;
   text-decoration: underline;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-active {
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.link::after {
+  position: absolute;
+  border-radius: 2px;
+  width: 48px;
+  height: 4px;
+  background: #404bbf;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  content: "";
 }
 
 ul {
@@ -288,7 +305,7 @@ button:focus {
 
 .footer {
   background-color: #2e2f42;
-padding: 100px 0;
+  padding: 100px 0;
 }
 
 .accent-studio-footer {
